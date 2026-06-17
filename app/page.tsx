@@ -3,19 +3,24 @@ import CompanionsList from "@/components/CompanionsList";
 import CTA from "@/components/CTA";
 import { Button } from "@/components/ui/button";
 import { recentSessions } from "@/constants";
+import { getAllCompanions, getRecentSession } from "@/lib/actions/companion.actions";
+import { getSubjectColor } from "@/lib/utils";
 import React from "react";
 
-const Page = () => {
-  return (
-    <main>
-      <h1>Popular Companions </h1>
-      <section className="home-section">
+const Page =async () => {
+  const companions = await getAllCompanions({limit: 3});
+  const recentSessionCompanions = await getRecentSession(10);
 
-        {recentSessions.map((sessions) => (
+  return (
+    <main className="gradient-bg-welcome">
+      <h1 className="text-white">Popular Companions </h1>
+      <section className="home-section">
+  
+        {companions.map((sessions) => (
            <CompanionCard 
            key={sessions.id}
         {...sessions}
-         bookmarked={false}
+        color={getSubjectColor(sessions.subject)}
         />
 
         ))}
@@ -24,7 +29,7 @@ const Page = () => {
       <section className="home-section">
         <CompanionsList 
         title="Recently completed sessions"
-        companions={recentSessions}
+        companions={recentSessionCompanions}
         classNames="w-2/3 max-lg:w-full"
         />
         <CTA />

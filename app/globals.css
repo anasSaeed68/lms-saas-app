@@ -94,6 +94,7 @@ body {
   font-family: var(--font-bricolage);
 }
 
+
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -126,6 +127,14 @@ body {
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+.gradient-bg-welcome {
+  background-color:#0f0e13;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
 }
 
 @layer base {
@@ -211,15 +220,14 @@ body {
   .btn-mic {
     @apply border-2 border-black rounded-lg flex flex-col gap-2 items-center py-8 max-sm:py-2 cursor-pointer w-full;
   }
-
   .transcript {
-    @apply relative flex flex-col gap-4 w-full items-center pt-10 flex-grow overflow-hidden;
+    @apply relative flex flex-col gap-4 w-full items-center pt-10 grow overflow-hidden;
   }
   .transcript-message {
     @apply overflow-y-auto w-full flex flex-col gap-4 max-sm:gap-2 pr-2 h-full text-2xl;
   }
   .transcript-fade {
-    @apply pointer-events-none absolute bottom-0 left-0 right-0 h-40 max-sm:h-20 bg-gradient-to-t from-background via-background/90 to-transparent z-10;
+    @apply pointer-events-none absolute bottom-0 left-0 right-0 h-40 max-sm:h-20 bg-linear-to-t from-background via-background/90 to-transparent z-10;
   }
 }
 

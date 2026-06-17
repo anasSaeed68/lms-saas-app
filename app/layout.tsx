@@ -23,6 +23,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  
   return (
     <html lang="en" className={cn("font-mono", jetbrainsMono.variable)}>
       <body className={`${bricolage.variable} antialiased`}>
