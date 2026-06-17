@@ -44,6 +44,7 @@ interface SupaCompanion{
   style: string;
   duration: number;
   author: string;
+  bookmarked: boolean;
 }
 
 interface GetAllCompanions {

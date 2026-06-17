@@ -31,7 +31,7 @@ const CompanionsLibrary = async ({ searchParams }: SearchParams) => {
           />
         ):(
           <section className="companions-grid">
-        {companions.map((companion) => (
+        {companions.map((companion:SupaCompanion) => (
           <CompanionCard
             key={companion.id}
             {...companion}
