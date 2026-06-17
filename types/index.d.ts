@@ -56,7 +56,6 @@ interface SupaCompanion{
   voice: string;
   style: string;
   duration: number;
-  author: string;
   bookmarked: boolean;
 }
 
