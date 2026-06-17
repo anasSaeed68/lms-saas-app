@@ -42,7 +42,7 @@ export const getAllCompanions = async ({limit=10, page=1, subject, topic}: GetAl
    return  await checkBookmarked(companions);
 }
 
-const checkBookmarked = async (companions) => {
+const checkBookmarked = async (companions:CreateNewCompanion[]) => {
   const {userId} = await auth();
   const supabase = createSupabaseClient();
   const {data:bookmarks, error} = await supabase.from('bookmarks')

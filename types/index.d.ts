@@ -35,6 +35,19 @@ interface CreateCompanion {
   duration: number;
 }
 
+interface CreateNewCompanion {
+  id: string;
+  name: string;
+  subject: string;
+  topic: string;
+  voice: string;
+  style: string;
+  duration: number;
+}
+
+
+
+
 interface SupaCompanion{
   id:string;
   name: string;
