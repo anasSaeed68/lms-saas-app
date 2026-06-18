@@ -134,8 +134,8 @@ Add screenshots or GIFs of:
 
 **Your Name**
 
-* GitHub: https://github.com/your-username
-* LinkedIn: https://linkedin.com/in/your-profile
+* GitHub: https://github.com/AnasSaeed09
+* LinkedIn: https://www.linkedin.com/in/anas-saeed-2b329424a/
 
 ---
 
