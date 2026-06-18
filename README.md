@@ -118,17 +118,8 @@ Secure user authentication and subscription management powered by Clerk.
 
 ## 🌐 Live Demo
 
-https://your-converso-url.vercel.app
+https://lms-saas-app-b137.vercel.app/
 
-## 📸 Screenshots
-
-Add screenshots or GIFs of:
-
-* Home Page
-* Companion Dashboard
-* Voice Session Interface
-* Session History
-* Bookmarks
 
 ## 👨‍💻 Author
 
